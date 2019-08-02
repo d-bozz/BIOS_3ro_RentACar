@@ -1,0 +1,2 @@
+seguro: 5000
+deposito: 12000

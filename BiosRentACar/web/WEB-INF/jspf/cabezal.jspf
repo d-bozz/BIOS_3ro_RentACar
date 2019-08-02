@@ -1,0 +1,22 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+<div class="cabezal">
+    <h1>Bios RentACar</h1>
+    <% if (session.getAttribute("empleadoLogueado") != null) { %>
+    <table>
+        <td><a href="inicio">Home</a></td>
+        <td><a href="vehiculos">Vehiculos</a></td>    
+        <td><a href="clientes">Clientes</a></td>    
+        <td><a href="vehiculos?accion=devolver">Devolucion</a>    
+    <td>
+        <form action="empleados" method="post">
+            <table>
+                <td><label>${empleadoLogueado.getNombreUsuario()}</label></td>
+                <td><input type="hidden" name="accion" value="logOut" />
+                <input type="submit" name="botonLogOut" value="Log Out" /></td>
+            </table>
+        </form>
+        </td>
+    </table>  
+    <% } %>
+</div>
